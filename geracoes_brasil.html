@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	function mostra(msg){
+		document.write(msg);
+		pulaLinha();
+	}
+
+	var anoBase = 1500;
+	var anoAtual = 2019;
+	var tempoGeracao = 28;
+
+	var qtdGeracoes = (anoAtual - anoBase)/tempoGeracao;
+
+	mostra("Desde 1500 se passaram " + Math.round(qtdGeracoes) + " gerações!")
+</script>
