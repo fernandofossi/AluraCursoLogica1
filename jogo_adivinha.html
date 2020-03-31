@@ -15,15 +15,19 @@
 		return Math.round(Math.random() * n);
 	}
 
-	var numeroSorteado = sorteia(100);
-	var chute = parseInt(prompt("Escolha um número."));
+	var numeroSorteado = sorteia(10);
+	
+	for(var tentativas = 0; tentativas < 3; tentativas++){
+		var chute = parseInt(prompt("Escolha um número."));
 
-	if (chute < numeroSorteado){
-		mostra("O número sorteado é maior que o chute");
-	} else if (chute > numeroSorteado){
-		mostra("O número sorteado é menor que o chute");
-	} else {
-		mostra("Você acerto!");
+		if (chute < numeroSorteado){
+			mostra("O número sorteado é maior que o chute");
+		} else if (chute > numeroSorteado){
+			mostra("O número sorteado é menor que o chute");
+		} else {
+			mostra("Você acertou!");
+			break;
+		}
 	}
 
 </script>
